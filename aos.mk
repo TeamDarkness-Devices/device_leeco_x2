@@ -20,9 +20,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/leeco/x2/device.mk)
 
 # Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+$(call inherit-product, vendor/aos/config/common_full_phone.mk)
 
-PRODUCT_NAME := lineage_x2
+PRODUCT_NAME := aos_x2
 PRODUCT_DEVICE := x2
 PRODUCT_MANUFACTURER := LeMobile
 PRODUCT_BRAND := LeEco
@@ -40,3 +40,9 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 PRODUCT_SYSTEM_PROPERTY_BLACKLIST += ro.product.model
 
 TARGET_VENDOR := leeco
+
+# Magisk
+WITH_ROOT=true
+
+# AudioFX
+WITH_AUDIOFX=true
